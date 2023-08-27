@@ -1,0 +1,26 @@
+<!-- edit-directory.component.html -->
+<div *ngIf="directory">
+<!-- edit-directory.component.html -->
+
+<div class="edit-form">
+    <h2>{{ directory.firstName }} {{ directory.lastName }}</h2>
+    <div class="form-field">
+      <label for="firstName">First Name:</label>
+      <input id="firstName" [(ngModel)]="directory.firstName" placeholder="First Name">
+    </div>
+    <div class="form-field">
+      <label for="lastName">Last Name:</label>
+      <input id="lastName" [(ngModel)]="directory.lastName" placeholder="Last Name">
+    </div>
+    <div class="form-field">
+      <label for="telephone">Telephone:</label>
+      <input id="telephone" [(ngModel)]="directory.telephone" placeholder="Telephone">
+    </div>
+    <div class="form-buttons">
+      <button class="save-button" (click)="updateDirectory(directory)" *ngIf="directory.id">Save</button>
+      <button class="delete-button" (click)="deleteDirectory(directory)" *ngIf="directory.id">Delete</button>
+      <button class="create-button" (click)="createDirectory(directory)" *ngIf="!directory.id">Create</button>
+    </div>
+  </div>
+  
+</div>
