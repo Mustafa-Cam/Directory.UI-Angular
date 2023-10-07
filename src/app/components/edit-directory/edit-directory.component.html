@@ -1,20 +1,45 @@
 <!-- edit-directory.component.html -->
 <div *ngIf="directory">
+  
+<!-- edit-directory.component.html -->
 <!-- edit-directory.component.html -->
 
-<div class="edit-form">
+
+<div *ngIf="isHidden" class="edit-form">  
+    
+  
     <h2>{{ directory.firstName }} {{ directory.lastName }}</h2>
     <div class="form-field">
       <label for="firstName">First Name:</label>
-      <input id="firstName" [(ngModel)]="directory.firstName" placeholder="First Name">
+      <input id="firstName" [(ngModel)]="directory.firstName" placeholder="First Name" type="text"  required maxlength="30" pattern="[A-Za-z]+" #firstName="ngModel">
+      <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert">
+        <div *ngIf="firstName.errors?.['required']"> First Name is required. </div>
+        <!-- <div *ngIf="firstName.errors?.['pattern']"> First Name must contain only letters. </div> -->
+      </div>    
     </div>
     <div class="form-field">
       <label for="lastName">Last Name:</label>
-      <input id="lastName" [(ngModel)]="directory.lastName" placeholder="Last Name">
-    </div>
+      <input id="lastName" [(ngModel)]="directory.lastName" placeholder="First Name" type="text"  required maxlength="20" pattern="[A-Za-z]+" #lastName="ngModel">
+      <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="alert">
+        <div *ngIf="lastName.errors?.['required']"> Last Name is required. </div>
+        <!-- <div *ngIf="lastName.errors?.['pattern']"> Last Name must contain only letters. </div> -->
+      </div>    
+     </div>
     <div class="form-field">
       <label for="telephone">Telephone:</label>
-      <input id="telephone" [(ngModel)]="directory.telephone" placeholder="Telephone">
+      <input
+      id="telephone"
+      [(ngModel)]="directory.telephone"
+      placeholder="Telephone"
+      [ngModelOptions]="{ standalone: true }"
+      pattern="[0-9]*"
+      maxlength="10"
+      (input)="onTelephoneInput($event)"
+      >    
+    </div>
+    <div class="form-field">
+      <label for="ID"></label>
+      <input type="number" [(ngModel)]="directory.userId" style="display: none;" readonly  > 
     </div>
     <div class="form-buttons">
       <button class="save-button" (click)="updateDirectory(directory)" *ngIf="directory.id">Save</button>
@@ -24,3 +49,4 @@
   </div>
   
 </div>
+

@@ -58,4 +58,28 @@
     cursor: pointer;
     /* margin-right: 400px; */
   }
-  
+  /* Temel düğme stilini ayarlayın */
+.create-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff; /* Düğme arka plan rengi */
+  border: none;
+  border-radius: 15px;
+  margin-left: 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Geçiş efekti */
+}
+
+/* Düğmeye fare üzerine gelindiğinde stil değişiklikleri */
+.create-button:hover {
+  background-color: #1bcf1b; /* Fare üzerine gelindiğinde arka plan rengi */
+}
+
+/* Düğmeye tıklandığında stil değişiklikleri */
+.create-button:active {
+  background-color: #b76c21; /* Düğmeye tıklandığında arka plan rengi */
+}

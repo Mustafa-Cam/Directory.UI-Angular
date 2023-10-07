@@ -1,0 +1,90 @@
+/* Temel stil ayarları */
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333; /* Metin rengi */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Ad ve soyadın arasına bir ayraç ekleyin */
+  .navbar-brand::after {
+    content: '\00a0\00b7\00a0'; /* Boşluk ve ayraç (nokta) karakteri */
+    font-size: 20px;
+    color: #777; /* Ayraç rengi */
+  }
+  
+  /* İlk ismin stilini ayarlayın */
+  .first-name {
+    color: #007bff; /* İlk isim rengi */
+  }
+  
+  /* Soyadın stilini ayarlayın */
+  .last-name {
+    color: #f00; /* Soyadı rengi */
+  }
+  
+  /* Fare üzerine gelindiğinde stil değişiklikleri */
+  .navbar-brand:hover {
+    color: #0056b3; /* Fare üzerine gelindiğinde metin rengi */
+  }
+  .first-name {
+    margin-right: 5px; /* İlk isim ile soyadı arasında boşluk */
+  }
+  
+  .last-name {
+    margin-left: 5px; /* İlk isim ile soyadı arasında boşluk */
+  }
+  .first-name, .last-name {
+    text-transform: capitalize;
+  }
+ /* Özel navbar stilini ayarlayın */
+.custom-navbar {
+    list-style: none; /* Noktalı liste işaretini kaldırır */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Navbar linklerinin stilini ayarlayın */
+  .custom-navbar .nav-item {
+    margin-right: 10px; /* Linkler arasında boşluk ekler */
+  }
+  
+  .custom-navbar .nav-link {
+    text-decoration: none;
+    color: #fff; /* Metin rengi */
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Geçiş efekti */
+    background-color: #007bff; /* Arka plan rengi */
+    padding: 10px 20px; /* Daha geniş bir dokunuş alanı için */
+    border-radius: 5px; /* Köşeleri yuvarlamak için */
+  }
+  
+  .custom-navbar .nav-link:hover {
+    background-color: #14ba3d; /* Fare üzerine gelindiğinde arka plan rengi */
+    color: #fff; /* Metin rengi */
+  }
+  
+  .custom-navbar .nav-link:hover {
+    color: #e7e743; /* Fare üzerine gelindiğinde metin rengi */
+  }
+  
+  /* "Log Out" düğmesinin stilini ayarlayın */
+  .custom-btn {
+    background-color: #dc3545; /* Düğme arka plan rengi */
+    color: #fff; /* Metin rengi */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Geçiş efekti */
+  }
+  
+  .custom-btn:hover {
+    background-color: #c82333; /* Fare üzerine gelindiğinde düğme rengi */
+  }
+  
+  

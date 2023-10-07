@@ -1,0 +1,29 @@
+<button class="create-button" (click)="initNewDirectory()" >Yeni Kişi Ekle</button>
+
+<div class="header">
+  <h1>Telefon Rehberi</h1>
+  <h3>{{firstName}}'nın rehberi</h3>
+</div>
+
+<div class="contact-list">
+  <div class="list-header">
+    <h2>Rehber</h2>
+  </div>
+  <ul class="contacts">
+    <li *ngFor="let directory of directory" class="contact-item">
+      <div class="contact-details">
+        <span class="name">{{ directory.firstName }}  {{ directory.lastName }}</span> <span> -- </span>
+        <span class="telephone">{{ directory.telephone }}</span>
+      </div>
+      <button class="edit-button" (click)="editdirectory(directory)">Düzenle</button>
+    </li>
+  </ul>
+</div> 
+
+<app-edit-directory
+  *ngIf="isHidden"
+  [isHidden]="isHidden"
+  [directory]="directoryToEdit" 
+  (directoryUpdated)="updateDirectoryList($event)">
+</app-edit-directory>
+

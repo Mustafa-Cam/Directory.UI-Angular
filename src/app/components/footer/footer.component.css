@@ -1,0 +1,12 @@
+/* CSS dosyanızın içinde footer'ı sabitleyin */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Footer arka plan rengi */
+    color: #fff; /* Footer metin rengi */
+    text-align: center;
+    padding: 10px 0; /* Footer içeriği ile kenar boşluğu */
+  }
+  

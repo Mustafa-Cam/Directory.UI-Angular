@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Sayfası</title>
+    <!-- Bootstrap CSS dosyasını ekleyin -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Giriş Yap
+                    </div>
+                    <div class="card-body" [class.error]="loginForm.controls['email'].dirty  && loginForm.hasError('required','email')">
+                        <form [formGroup]="loginForm">
+                            <div class="form-group" >
+                                <label for="username">Kullanıcı Adı:</label>
+                                <input type="text" formControlName="email" class="form-control" id="username" placeholder="Kullanıcı Adı yani e-postanızı giriniz">
+                                <small class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">Username required</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Şifre:</label>
+                                <input type="password" formControlName="password" class="form-control" id="password" placeholder="Şifre">
+                                <small class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">password required</small>
+                            </div>
+                            <button (click)="onlogin()" [disabled]="loginForm.invalid" type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+                        </form>
+                        <a href="/signup">Signup Page</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS ve jQuery dosyalarını ekleyin -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

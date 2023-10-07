@@ -1,27 +1,5 @@
-<!-- app.component.html -->
-
-<button class="create-button" (click)="initNewDirectory()">Yeni Kişi Ekle</button>
-
-<div class="header">
-  <h1>Telefon Rehberi</h1>
-</div>
-
-<div class="contact-list">
-  <div class="list-header">
-    <h2>Rehber</h2>
-  </div>
-  <ul class="contacts">
-    <li *ngFor="let directory of directory" class="contact-item">
-      <div class="contact-details">
-        <span class="name">{{ directory.firstName }} {{ directory.lastName }}</span>
-        <span class="telephone">{{ directory.telephone }}</span>
-      </div>
-      <button class="edit-button" (click)="editdirectory(directory)">Düzenle</button>
-    </li>
-  </ul>
-</div>
-
-<app-edit-directory
-  [directory]="directoryToEdit" 
-  (directoryUpdated)="updateDirectoryList($event)">
-</app-edit-directory>
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+<lib-ng-toast></lib-ng-toast>
+<ng-toast></ng-toast>
+<app-footer></app-footer>

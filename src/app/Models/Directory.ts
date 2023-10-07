@@ -3,4 +3,5 @@ export class Directory{
  firstName= "";
  lastName= "";
  telephone= "";   
+ userId: number = 2;
 }
