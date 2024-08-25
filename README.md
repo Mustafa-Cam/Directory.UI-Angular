@@ -51,10 +51,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ![image](https://github.com/user-attachments/assets/cc1bd598-86b5-4e01-92fc-3aa595d407c0)
 
+## Add the user to directory. ==>
+![image](https://github.com/user-attachments/assets/0e47725c-41b2-400c-b21c-64408b231119)
 
-## Login and Logout process =>
+## update the user. ==>
+![image](https://github.com/user-attachments/assets/3512557a-a7f0-4419-bc32-436131d756db)
 
-https://www.loom.com/share/ae47f2c0d6e240a18557bf055d514baa?sid=334d145d-dd55-49a7-8b1e-a8c1a495e92a
+## The entire dashboard with contacts added to the Directory. =>
+![image](https://github.com/user-attachments/assets/4e4d9e8b-bddb-419e-b338-5373dca31aac)
 
 
 ## All Process in one video. ==>
