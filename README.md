@@ -60,6 +60,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## The entire dashboard with contacts added to the Directory. =>
 ![image](https://github.com/user-attachments/assets/4e4d9e8b-bddb-419e-b338-5373dca31aac)
 
+## MS SQL User Table =>
+![Ekran görüntüsü 2024-08-25 194457](https://github.com/user-attachments/assets/c2643c65-46a8-42da-aa7e-0f7abd0152f6)
+
+## MS SQL Directory Table =>
+![image](https://github.com/user-attachments/assets/baf6ec8a-dd99-4181-a896-2b0e353e1ffc)
 
 ## All Process in one video. ==>
 
